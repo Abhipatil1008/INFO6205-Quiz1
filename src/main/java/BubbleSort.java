@@ -10,7 +10,22 @@ public class BubbleSort {
      */
     public void sort (Comparable[] a){
 //        write your code here.
+            int n = a.length;
 
+                for (int i = 0; i < n - 1; i++) {
+                    int s=0;
+                    for (int j = 0; j < n - 1 - i; j++) {
+            
+                        if (a[j].compareTo(a[j + 1]) > 0) {
+                             swap(a, j, j + 1);
+                             s=1;
+                       }
+                    }
+                    if(s==0){
+                        break;
+                    }
+                }
+           
     }
     /**
      * Swaps two elements in the given array.
